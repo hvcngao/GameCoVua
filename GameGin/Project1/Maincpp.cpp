@@ -1308,6 +1308,9 @@ void GameManager::Play(RenderWindow &window, bool check, bool &cont, int &time)
 			oldPos = posS.top();		posS.pop();//vi ham move tu nhet trong stack roi
 			move(c, oldPos, newPos);
 			LuotChoi = !LuotChoi;
+			for (int i = 0; i < 16; i++)
+				f[i].s.setColor(Color::White);
+			f[c].s.setColor(Color::Yellow);
 			//f[c].x = newPos.x;	f[c].y = newPos.y;
 			//reset	
 			click = 0;
