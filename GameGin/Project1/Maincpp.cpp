@@ -216,7 +216,7 @@ void GameManager::SaveWinner(RenderWindow &window, bool &cont, int &score, strin
 	MYSQL_RES *res;
 	conn = mysql_init(0);
 
-	conn = mysql_real_connect(conn, "localhost", "root", "Cuong1998", "Chess", 3306, NULL, 0);
+	conn = mysql_real_connect(conn, "localhost", "root", "luc123", "Chess", 3306, NULL, 0);
 
 	if (conn) {
 		puts("Successful connection to database!");
@@ -260,7 +260,7 @@ void GameManager::HighScore(RenderWindow &window, bool &cont, int &time) {
 	MYSQL_RES *res;
 	conn = mysql_init(0);
 	int ThoiGian;
-	conn = mysql_real_connect(conn, "localhost", "root", "Cuong1998", "Chess", 3306, NULL, 0);
+	conn = mysql_real_connect(conn, "localhost", "root", "luc123", "Chess", 3306, NULL, 0);
 
 	if (conn) {
 		puts("Successful connection to database!");
@@ -423,7 +423,7 @@ void GameManager::LoadForm(RenderWindow &window, bool &cont, int &time)
 	MYSQL_RES *res;
 	conn = mysql_init(0);
 	int ThoiGian;
-	conn = mysql_real_connect(conn, "localhost", "root", "Cuong1998", "Chess", 3306, NULL, 0);
+	conn = mysql_real_connect(conn, "localhost", "root", "luc123", "Chess", 3306, NULL, 0);
 
 	if (conn) {
 		puts("Successful connection to database!");
@@ -523,7 +523,7 @@ void GameManager::Load(RenderWindow &window, bool &cont, int id) {
 	MYSQL_RES *res;
 	conn = mysql_init(0);
 	int ThoiGian;
-	conn = mysql_real_connect(conn, "localhost", "root", "Cuong1998", "Chess", 3306, NULL, 0);
+	conn = mysql_real_connect(conn, "localhost", "root", "luc123", "Chess", 3306, NULL, 0);
 
 	if (conn) {
 		puts("Successful connection to database!");
@@ -1181,7 +1181,7 @@ void GameManager::Play(RenderWindow &window, bool check, bool &cont, int &time)
 	//add màn hình nền
 	tgui::Theme theme{ "themes/BabyChess.txt" };
 	gui.add(tgui::Picture::create("Graphics/background.jpg"));
-	Texture t1, t2, t3, t4;
+	Texture t1, t2, t3;
 	//add nhạc
 	SoundBuffer buf1;
 	buf1.loadFromFile("kimochi.wav");
@@ -1198,7 +1198,6 @@ void GameManager::Play(RenderWindow &window, bool check, bool &cont, int &time)
 	gui.add(note);
 
 	t3.loadFromFile("Graphics/no.png");
-	t4.loadFromFile("backplay.png");
 
 	auto tg = tgui::Label::create("Time");
 	tg->setRenderer(theme.getRenderer("Label"));
@@ -1235,8 +1234,6 @@ void GameManager::Play(RenderWindow &window, bool check, bool &cont, int &time)
 	for (int i = 0; i < 32; i++) f[i].s.setTexture(t1);
 	Sprite sBoard(t2);
 	Sprite sPositive(t3);
-	Sprite sBackplay(t4);
-	sBackplay.setPosition(520, 100);
 	if (check)	Create();//khoi tao
 
 	bool LuotChoi = true;//luot choi : = true=> nguoi ... =false => may
@@ -1339,7 +1336,6 @@ void GameManager::Play(RenderWindow &window, bool check, bool &cont, int &time)
 			continue;
 		}
 		////// draw  ///////
-		window.draw(sBackplay);
 
 		gui.draw();
 		for (int i = 0; i < count; i++) {
@@ -1407,7 +1403,7 @@ void GameManager::SaveSql(RenderWindow &window, bool &cont, int &time, string na
 	MYSQL_RES *res;
 	conn = mysql_init(0);
 
-	conn = mysql_real_connect(conn, "localhost", "root", "Cuong1998", "Chess", 3306, NULL, 0);
+	conn = mysql_real_connect(conn, "localhost", "root", "luc123", "Chess", 3306, NULL, 0);
 
 	if (conn) {
 		puts("Successful connection to database!");

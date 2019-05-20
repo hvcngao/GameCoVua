@@ -85,12 +85,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files\MySQL\Connector C++ 8.0\include;C:\Program Files\MySQL\MySQL Server 8.0\include;C:\Users\Dell\Downloads\Thuc tap Nhom\GameCoVua\TGUI-0.8\include;C:\Users\Dell\Downloads\Thuc tap Nhom\GameCoVua\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\Connector C++ 8.0\include;C:\Program Files\MySQL\MySQL Server 8.0\include;E:\ThucTapNhom\T2_TTN_KTHP\GameGithub\GameCoVua\TGUI-0.8\include;E:\ThucTapNhom\T2_TTN_KTHP\GameGithub\GameCoVua\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-audio-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-network-d.lib;mysqlcppconn.lib;libmysql.lib;tgui-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;C:\Program Files\MySQL\MySQL Server 8.0\lib;C:\Users\Dell\Downloads\Thuc tap Nhom\GameCoVua\TGUI-0.8\lib;C:\Users\Dell\Downloads\Thuc tap Nhom\GameCoVua\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;C:\Program Files\MySQL\MySQL Server 8.0\lib;E:\ThucTapNhom\T2_TTN_KTHP\GameGithub\GameCoVua\TGUI-0.8\lib;E:\ThucTapNhom\T2_TTN_KTHP\GameGithub\GameCoVua\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
