@@ -10,7 +10,7 @@
 #include<sql.h>
 #include<SFML\Audio.hpp>
 #include<TGUI/TGUI.hpp>
-
+//df
 #include <mysql.h>
 using namespace sf;
 using namespace std;
@@ -216,7 +216,7 @@ void GameManager::SaveWinner(RenderWindow &window, bool &cont, int &score, strin
 	MYSQL_RES *res;
 	conn = mysql_init(0);
 
-	conn = mysql_real_connect(conn, "localhost", "root", "luc123", "Chess", 3306, NULL, 0);
+	conn = mysql_real_connect(conn, "localhost", "root", "1234", "Chess", 3306, NULL, 0);
 
 	if (conn) {
 		puts("Successful connection to database!");
@@ -260,7 +260,7 @@ void GameManager::HighScore(RenderWindow &window, bool &cont, int &time) {
 	MYSQL_RES *res;
 	conn = mysql_init(0);
 	int ThoiGian;
-	conn = mysql_real_connect(conn, "localhost", "root", "luc123", "Chess", 3306, NULL, 0);
+	conn = mysql_real_connect(conn, "localhost", "root", "1234", "Chess", 3306, NULL, 0);
 
 	if (conn) {
 		puts("Successful connection to database!");
@@ -423,7 +423,7 @@ void GameManager::LoadForm(RenderWindow &window, bool &cont, int &time)
 	MYSQL_RES *res;
 	conn = mysql_init(0);
 	int ThoiGian;
-	conn = mysql_real_connect(conn, "localhost", "root", "luc123", "Chess", 3306, NULL, 0);
+	conn = mysql_real_connect(conn, "localhost", "root", "1234", "Chess", 3306, NULL, 0);
 
 	if (conn) {
 		puts("Successful connection to database!");
@@ -523,7 +523,7 @@ void GameManager::Load(RenderWindow &window, bool &cont, int id) {
 	MYSQL_RES *res;
 	conn = mysql_init(0);
 	int ThoiGian;
-	conn = mysql_real_connect(conn, "localhost", "root", "luc123", "Chess", 3306, NULL, 0);
+	conn = mysql_real_connect(conn, "localhost", "root", "1234", "Chess", 3306, NULL, 0);
 
 	if (conn) {
 		puts("Successful connection to database!");
@@ -596,7 +596,7 @@ void GameManager::Load(RenderWindow &window, bool &cont, int id) {
 			else if (g == 4)		v = 900;
 			else if (g == 5)		v = 9000;
 			else if (g == 6)		v = 100;
-			f[k].cost = f[k].index / g * v;
+			f[k].cost = f[k].index / g * v;	
 			k++;
 		}
 	}
@@ -1403,7 +1403,7 @@ void GameManager::SaveSql(RenderWindow &window, bool &cont, int &time, string na
 	MYSQL_RES *res;
 	conn = mysql_init(0);
 
-	conn = mysql_real_connect(conn, "localhost", "root", "luc123", "Chess", 3306, NULL, 0);
+	conn = mysql_real_connect(conn, "localhost", "root", "1234", "Chess", 3306, NULL, 0);
 
 	if (conn) {
 		puts("Successful connection to database!");
